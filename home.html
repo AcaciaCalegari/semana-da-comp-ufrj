@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Contatos
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item *ngFor='let contato of contatos'>
+      <h1>{{contato.nome}}</h1>
+      <h2>{{contato.telefone}}</h2>
+      <h3>{{contato.descricao}}</h3>
+    </ion-item>
+  </ion-list>
+
+  <ion-fab right bottom>
+    <button ion-fab color='light'(click)="adicionarContato()"> </button>
+  </ion-fab>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <p>Total: {{ contatos.length }}</p>
+  </ion-toolbar>
+</ion-footer>
